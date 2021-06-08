@@ -1,0 +1,15 @@
+/**
+/*!
+Theme Name: Starbugs
+Theme URI: https://www.starbugs.org
+Author: Jirayu Limjinda
+Author URI: https://www.starbugs.org
+Description: เว็บนี้สร้างด้วย WordPress ฉบับที่เขียนเองโดย ... ใช้สำหรับเว็บไซต์ starbugs.com เท่านั้น
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: grid-layout, custom-menu, featured-images, blog
+Text Domain: wpcourse
+*/
+@font-face{font-family:Raleway;src:url(fonts/Raleway-Medium.woff2) format("woff2"),url(fonts/Raleway-Medium.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:Raleway;src:url(fonts/Raleway-SemiBold.woff2) format("woff2"),url(fonts/Raleway-SemiBold.woff) format("woff");font-weight:700;font-style:normal;font-display:swap}
+/*# sourceMappingURL=style.css.map */
