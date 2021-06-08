@@ -1,0 +1,20 @@
+.feature-block {
+  padding: 60px 0;
+  h3 {
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  a {
+    display: block;
+    &.large-image,
+    &.small-image {
+      margin-bottom: 30px;
+    }
+  }
+}
