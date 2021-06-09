@@ -13,11 +13,11 @@
   flex-direction: row;
   flex: 1;
   .site-logo {
-    width: 80px;
-    height: 80px;
     display: inline-block;
     margin-right: 64px;
     img {
+      width: 80px;
+      height: 80px;
       display: block;
       margin: auto;
     }
@@ -53,6 +53,13 @@
     font-size: 18px;
     &:hover {
       color: $green;
+    }
+    img {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      margin-right: 4px;
+      vertical-align: text-bottom;
     }
   }
 }

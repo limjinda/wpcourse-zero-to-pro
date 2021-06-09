@@ -15,7 +15,7 @@
 				<div class="container">
 					<div class="header-left">
 						<a href="#" class="site-logo">
-							<img src="https://via.placeholder.com/80x80" alt="">
+							<img src="<?php echo get_template_directory_uri() ?>/img/site-logo.png" alt="Logo" />
 						</a>
 						<ul class="site-navigation">
 							<li><a href="#">Homepage</a></li>
@@ -25,13 +25,16 @@
 						</ul>
 					</div>
 					<div class="header-right">
-						<a href="#">Find a Store</a>
+						<a href="#">
+							<img src="<?php echo get_template_directory_uri() ?>/img/icon-marker.png" alt="location" />
+							Find a Store
+						</a>
 					</div>
 				</div>
 			</header>
 			<!-- slider -->
 			<section class="slider-block">
-				<img src="https://via.placeholder.com/1440x550" alt="" />
+				<img src="<?php echo get_template_directory_uri() ?>/img/slide1.jpg" alt="Slider - image 1" />
 			</section>
 			<!-- feature -->
 			<section class="feature-block">
@@ -41,7 +44,7 @@
 						<!-- feature left -->
 						<div class="col-6">
 							<a href="#" class="large-image">
-								<img src="https://via.placeholder.com/675" alt="" />
+								<img src="<?php echo get_template_directory_uri() ?>/img/large.jpg" alt="feature 1" />
 							</a>
 						</div>
 						<!-- feature right -->
@@ -50,25 +53,25 @@
 								<!-- small feature -->
 								<div class="col-6">
 									<a href="#" class="small-image">
-										<img src="https://via.placeholder.com/322" alt="" />
+										<img src="<?php echo get_template_directory_uri() ?>/img/small1.jpg" alt="Small feature" />
 									</a>
 								</div>
 								<!-- small feature -->
 								<div class="col-6">
 									<a href="#" class="small-image">
-										<img src="https://via.placeholder.com/322" alt="" />
+										<img src="<?php echo get_template_directory_uri() ?>/img/small2.jpg" alt="Small feature" />
 									</a>
 								</div>
 								<!-- small feature -->
 								<div class="col-6">
 									<a href="#" class="small-image">
-										<img src="https://via.placeholder.com/322" alt="" />
+										<img src="<?php echo get_template_directory_uri() ?>/img/small3.jpg" alt="Small feature" />
 									</a>
 								</div>
 								<!-- small feature -->
 								<div class="col-6">
 									<a href="#" class="small-image">
-										<img src="https://via.placeholder.com/322" alt="" />
+										<img src="<?php echo get_template_directory_uri() ?>/img/small4.jpg" alt="Small feature" />
 									</a>
 								</div>
 							</div>
@@ -76,7 +79,7 @@
 					</div>
 					<div class="feature-banner">
 						<a href="#">
-							<img src="https://via.placeholder.com/1380x350" alt="" />
+							<img src="<?php echo get_template_directory_uri() ?>/img/footer-banner.jpg" alt="Promotion banner" />
 						</a>
 					</div>
 				</div>
@@ -119,17 +122,17 @@
 								<ul class="footer-social-links">
 									<li>
 										<a href="#">
-											<img src="https://via.placeholder.com/48" alt="facebook" />
+											<img src="<?php echo get_template_directory_uri() ?>/img/icon-facebook.png" alt="facebook" />
 										</a>
 									</li>
 									<li>
 										<a href="#">
-											<img src="https://via.placeholder.com/48" alt="twitter" />
+											<img src="<?php echo get_template_directory_uri() ?>/img/icon-twitter.png" alt="twitter" />
 										</a>
 									</li>
 									<li>
 										<a href="#">
-											<img src="https://via.placeholder.com/48" alt="line" />
+											<img src="<?php echo get_template_directory_uri() ?>/img/icon-line.png" alt="line" />
 										</a>
 									</li>
 								</ul>
