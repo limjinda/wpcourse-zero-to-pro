@@ -43,8 +43,8 @@ function wp_theme_register_script() {
 	 * Enqueue stylesheet that generated from gulp
 	 * first is vendor, second is your style.css
 	 */
-	wp_enqueue_style('wp-style', get_stylesheet_uri(), array(), '1.0.0');
 	wp_enqueue_style('bootstrap', get_theme_file_uri('/css/vendor/vendor.css'), array(), '1.0.0');
+	wp_enqueue_style('wp-style', get_stylesheet_uri(), array(), '1.0.0');
 	
 	/**
 	 * Register js script file(js/client.js) 

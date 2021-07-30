@@ -1,0 +1,11 @@
+.btn-primary {
+  padding: 10px 48px;
+  background-color: $green;
+  border-color: $green;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken($green, 10%);
+    border-color: darken($green, 10%);
+  }
+}

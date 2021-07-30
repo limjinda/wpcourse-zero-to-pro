@@ -10,15 +10,17 @@
     </section>
     <!-- content -->
     <section class="main-promotion-content">
-      <h3>Summer Jelly Bag Set</h3>
-      <p>
-        User experience hypotheses series A financing supply chain pivot mass market leverage conversion prototype. Business-to-consumer startup niche market long tail iteration agile development direct mailing. Handshake A/B testing termsheet marketing pivot business model canvas. Twitter virality low hanging fruit MVP founders.
-      </p>
-      <ul>
-        <li>Marketing graphical user interface stock interaction design.</li>
-        <li>Low hanging fruit A/B testing gen-z branding business plan burn rate termsheet business-to-business bootstrapping.</li>
-        <li>Advisor hackathon burn rate accelerator venture incubator.</li>
-      </ul>
+      <article class="page-content">
+        <h3>Summer Jelly Bag Set</h3>
+        <p>
+          User experience hypotheses series A financing supply chain pivot mass market leverage conversion prototype. Business-to-consumer startup niche market long tail iteration agile development direct mailing. Handshake A/B testing termsheet marketing pivot business model canvas. Twitter virality low hanging fruit MVP founders.
+        </p>
+        <ul>
+          <li>Marketing graphical user interface stock interaction design.</li>
+          <li>Low hanging fruit A/B testing gen-z branding business plan burn rate termsheet business-to-business bootstrapping.</li>
+          <li>Advisor hackathon burn rate accelerator venture incubator.</li>
+        </ul>
+      </article>
     </section>
     <!-- share -->
     <section class="main-promotion-sharing-center">
