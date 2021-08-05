@@ -1,0 +1,133 @@
+.menu-searchbox {
+  padding: 60px 0;
+  .form-group {
+    max-width: 600px;
+    margin: 0 auto;
+    &.group-with-button {
+      position: relative;
+    }
+    .form-control {
+      height: 56px;
+      background-color: #F7F7F7;
+      border: 1px solid $light-grey;
+      padding-right: 130px;
+    }
+    .btn {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      width: 120px;
+      padding: 4px 16px;
+      height: 48px;
+    }
+  }
+}
+
+.sidebar-item {
+  background-color: $white;
+  padding: 12px 24px;
+  border: 1px solid $light-grey;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  margin: 0 0 24px;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      display: block;
+      border-bottom: 1px solid $light-grey;
+      &:last-child {
+        border-bottom: 0px;
+      }
+      a {
+        display: block;
+        padding: 12px 0;
+        text-decoration: none;
+        color: $black;
+        font-weight: bold;
+        font-size: 16px;
+        position: relative;
+        &:hover {
+          color: $green;
+        }
+        &:after {
+          content: '';
+          display: block;
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          bottom: 16px;
+          right: 0px;
+          background: transparent url('img/right-caret.jpg') no-repeat center center;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+.sidebar-wrapper {
+  p {
+    color: $dark-grey;
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.menu-type {
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid $light-grey;
+  }
+  p {
+    font-size: 16px;
+  }
+  .menu-slider {
+    margin: 24px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    .menu-item {
+      flex: 0 0 calc( (100% - 30px) / 3 );
+      margin: 0 15px 0 0;
+      &:last-child {
+        margin-right: 0;
+      }
+      .menu-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        margin: 0 0 16px;
+      }
+      .menu-name {
+        font-weight: bold;
+        margin: 0 0 4px;
+        font-size: 16px;
+      }
+      .menu-description {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0 0 12px;
+      }
+      .menu-action {
+        .menu-stock {
+          font-weight: bold;
+          &.in {
+            color: $green;  
+          }
+          &.out {
+            color: $yellow;
+          }
+        }
+        .menu-price {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
