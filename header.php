@@ -17,12 +17,11 @@
 						<a href="#" class="site-logo">
 							<img src="<?php echo get_template_directory_uri() ?>/img/site-logo.png" alt="Logo" />
 						</a>
-						<ul class="site-navigation">
-							<li><a href="#">Homepage</a></li>
-							<li><a href="#">Menus</a></li>
-							<li><a href="#">Promotions</a></li>
-							<li><a href="#">Contact us</a></li>
-						</ul>
+						<?php wp_nav_menu(array(
+							'theme_location' => 'top',
+							'menu_class' => 'site-navigation',
+							'container' => false
+						)); ?>
 					</div>
 					<div class="header-right">
 						<a href="#">

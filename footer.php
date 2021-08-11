@@ -6,30 +6,28 @@
 							<!-- footer 1 -->
 							<div class="col-3">
 								<h4>About Starbugs</h4>
-								<ul class="sitemap-link">
-									<li><a href="#">Our Heritage</a></li>
-									<li><a href="#">Our Company</a></li>
-									<li><a href="#">Responsibility</a></li>
-									<li><a href="#">Career Center</a></li>
-								</ul>
+								<?php wp_nav_menu(array(
+									'theme_location' => 'about',
+									'menu_class' => 'sitemap-link',
+									'container' => false
+								)); ?>
 							</div>
 							<!-- footer 2 -->
 							<div class="col-3">
 								<h4>Drink at Home</h4>
-								<ul class="sitemap-link">
-									<li><a href="#">Coffee Story</a></li>
-									<li><a href="#">Coffee & Tea at Home</a></li>
-									<li><a href="#">How to Brew</a></li>
-								</ul>
+								<?php wp_nav_menu(array(
+									'theme_location' => 'story',
+									'menu_class' => 'sitemap-link',
+									'container' => false
+								)); ?>
 							</div>
 							<!-- footer 3 -->
 							<div class="col-3">
-								<ul class="sitemap-link">
-									<li><a href="#">Starbugs rewards</a></li>
-									<li><a href="#">Membership</a></li>
-									<li><a href="#">More Information</a></li>
-									<li><a href="#">Help Center</a></li>
-								</ul>
+								<?php wp_nav_menu(array(
+									'theme_location' => 'sitemap',
+									'menu_class' => 'sitemap-link',
+									'container' => false
+								)); ?>
 							</div>
 							<!-- footer 4 -->
 							<div class="col-3">
@@ -60,12 +58,11 @@
 						<div class="row">
 							<!-- copyright 1 -->
 							<div class="col-6">
-								<ul class="copyright-link">
-									<li><a href="#">Homepage</a></li>
-									<li><a href="#">Menus</a></li>
-									<li><a href="#">Promotions</a></li>
-									<li><a href="#">Contact Us</a></li>
-								</ul>
+								<?php wp_nav_menu(array(
+									'theme_location' => 'footer',
+									'menu_class' => 'copyright-link',
+									'container' => false
+								)); ?>
 							</div>
 							<!-- copyright 2 -->
 							<div class="col-6">
