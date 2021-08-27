@@ -9,3 +9,23 @@
     border-color: darken($green, 10%);
   }
 }
+
+.slick-dots {
+  bottom: 20px;
+  li {
+    &.slick-active {
+      button {
+        &:before {
+          color: $white;
+        }
+      }
+    }
+    button {
+      padding: 0;
+      &:before {
+        font-size: 56px;
+        color: $white;
+      }
+    }
+  }
+}

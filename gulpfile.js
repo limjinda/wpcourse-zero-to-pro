@@ -80,7 +80,9 @@ const scripts = () => gulp
  */
  const vendorStyles = () => gulp
  .src([
-		'./node_modules/bootstrap/dist/css/bootstrap.min.css'
+		'./node_modules/bootstrap/dist/css/bootstrap.min.css',
+		'./node_modules/slick-carousel/slick/slick.css',
+		'./node_modules/slick-carousel/slick/slick-theme.css',
 	], {allowEmpty: true})
  .pipe(concat('vendor.css'))
  .pipe(gulp.dest('./css/vendor'));
@@ -92,7 +94,7 @@ const scripts = () => gulp
  const vendorScripts = () => gulp
  .src([
 		'./js/vendor/modernizr-3.6.0.min.js', 
-		// './node_modules/bootstrap/dist/js/bootstrap.min.js',
+		'./node_modules/slick-carousel/slick/slick.js'
 	], {allowEmpty: true})
  .pipe(
 		concat('vendor.js', {

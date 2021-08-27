@@ -1,1 +1,1 @@
-{"version":3,"sources":["main.js"],"names":[],"mappings":"AAIA","file":"complied.js","sourcesContent":["/* eslint-disable no-console */\n/* global */\n/* exported */\n\n'use strict';\n"]}
+{"version":3,"sources":["main.js"],"names":["jQuery","slick","infinite","dots"],"mappings":"AAIA,aAEAA,OAAO,iBAAiBC,MAAM,CAC5BC,UAAU,EAEVC,MAAM","file":"complied.js","sourcesContent":["/* eslint-disable no-console */\n/* global */\n/* exported */\n\n'use strict';\n\njQuery('.slider-block').slick({\n  infinite: true,\n  // autoplay: true,\n  dots: true,\n});"]}

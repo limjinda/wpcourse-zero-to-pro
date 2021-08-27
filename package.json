@@ -11,7 +11,8 @@
   "author": "Jirayu Limjinda <jir4yu.l@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^5.0.1"
+    "bootstrap": "^5.0.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.14.2",
