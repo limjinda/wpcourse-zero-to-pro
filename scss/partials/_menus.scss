@@ -85,48 +85,91 @@
   p {
     font-size: 16px;
   }
+  .menu-list {
+    margin: 24px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    .menu-item {
+      flex: 0 0 calc( (100% - 45px) / 4 );
+      margin: 0 15px 30px 0;
+      &:nth-child(4n) {
+        margin-right: 0;
+      }  
+    }
+  }
   .menu-slider {
     margin: 24px auto;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    .menu-item {
+    .slick-list {
+      margin: 0 -15px 0 0;
+    }
+    .slick-slide {
+      margin: 0 15px 0 0;
+    }
+    .menu-prev,
+    .menu-next {
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      height: 40px;
+      display: block;
+      content: '';
+      z-index: 2;
+      margin-top: -80px;
+      border-radius: 50em;
+    }
+    .menu-prev {
+      left: 20px;
+      background: transparent url('img/nav-left.png') no-repeat center center;
+      background-size: cover;
+    }
+    .menu-next {
+      right: 20px;
+      background: transparent url('img/nav-right.png') no-repeat center center;
+      background-size: cover;
+    }
+  }
+  .menu-item {
       flex: 0 0 calc( (100% - 30px) / 3 );
       margin: 0 15px 0 0;
-      &:last-child {
-        margin-right: 0;
-      }
-      .menu-image {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 8px;
-        margin: 0 0 16px;
-      }
-      .menu-name {
+    &:last-child {
+      margin-right: 0;
+    }
+    .menu-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      margin: 0 0 16px;
+    }
+    .menu-name {
+      font-weight: bold;
+      margin: 0 0 4px;
+      font-size: 16px;
+    }
+    .menu-description {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0 0 12px;
+    }
+    .menu-action {
+      .menu-stock {
         font-weight: bold;
-        margin: 0 0 4px;
-        font-size: 16px;
-      }
-      .menu-description {
-        font-size: 14px;
-        line-height: 1.5;
-        margin: 0 0 12px;
-      }
-      .menu-action {
-        .menu-stock {
-          font-weight: bold;
-          &.in {
-            color: $green;  
-          }
-          &.out {
-            color: $yellow;
-          }
+        &.in {
+          color: $green;  
         }
-        .menu-price {
-          text-align: right;
+        &.out {
+          color: $yellow;
         }
+      }
+      .menu-price {
+        text-align: right;
       }
     }
   }
