@@ -35,11 +35,29 @@ body {
   }
 }
 
-.slider-block {
+.slider-block,
+.mobile-slider-block {
   overflow: hidden;
   img {
     max-width: 100%;
     height: auto;
     display: block;
+  }
+}
+
+.slider-block {
+  display: none;
+  @media #{$md} {
+    display: block;
+  }
+}
+
+.mobile-slider-block {
+  display: block;
+  &.slick-dotted.slick-slider {
+    margin: 0;
+  }
+  @media #{$md} {
+    display: none;
   }
 }

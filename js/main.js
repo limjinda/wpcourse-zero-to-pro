@@ -10,6 +10,12 @@ jQuery('.slider-block').slick({
   dots: true,
 });
 
+jQuery('.mobile-slider-block').slick({
+  infinite: true,
+  autoplay: false,
+  dots: true,
+})
+
 jQuery('.menu-slider').slick({
   infinite: true,
   autoplay: false,
