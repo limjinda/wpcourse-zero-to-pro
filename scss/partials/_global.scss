@@ -1,3 +1,13 @@
+.wrapper {
+  position: relative;
+}
+
+body {
+  &.lock {
+    overflow-y: hidden;
+  }
+}
+
 .page-content {
   max-width: 962px;
   margin: auto;

@@ -27,6 +27,7 @@ function wp_theme_setup() {
 	 	'story' => __( 'Story', 'wp-theme-prototype' ),
 	 	'sitemap' => __( 'Sitemap', 'wp-theme-prototype' ),
 	 	'footer' => __( 'Footer Sitemap', 'wp-theme-prototype' ),
+	 	'mobile_menu' => __( 'Mobile Navigation', 'wp-theme-prototype' ),
 	));
 	
 	/**

@@ -8,13 +8,13 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<?php wp_head(); ?>
 	</head>
-	<body>
+	<body <?php body_class(); ?>>
 		<div class="wrapper">
 			<!-- header -->
 			<header class="header">
 				<div class="container">
 					<div class="header-left">
-						<a href="#" class="site-logo">
+						<a href="<?php echo home_url(); ?>" class="site-logo">
 							<img src="<?php echo get_template_directory_uri() ?>/img/site-logo.png" alt="Logo" />
 						</a>
 						<?php wp_nav_menu(array(
@@ -24,10 +24,30 @@
 						)); ?>
 					</div>
 					<div class="header-right">
-						<a href="#">
-							<img src="<?php echo get_template_directory_uri() ?>/img/icon-marker.png" alt="location" />
-							Find a Store
+						<!-- mobile menu -->
+						<a href="javascript:void(0)" class="mobile-show-menu">
+							Menu
 						</a>
+						<!-- mobile menu -->
+						<div class="right-navigation-menu">
+							<a href="#">
+								<img src="<?php echo get_template_directory_uri() ?>/img/icon-marker.png" alt="location" />
+								Find a Store
+							</a>
+						</div>
 					</div>
 				</div>
+				<!-- mobile menu -->
+				<div class="mobile-menu-block">
+					<div class="mobile-backdrop"></div>
+					<a href="javascript:void(0)" class="mobile-close-menu">
+						X
+					</a>
+					<?php wp_nav_menu(array(
+						'theme_location' => 'mobile_menu',
+						'menu_class' => 'mobile-navigation',
+						'container' => false
+					)); ?>
+				</div>
+				<!-- mobile menu -->
 			</header>
