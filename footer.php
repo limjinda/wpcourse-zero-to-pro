@@ -4,7 +4,7 @@
 					<div class="container">
 						<div class="row">
 							<!-- footer 1 -->
-							<div class="col-3">
+							<div class="col-md-3">
 								<h4>About Starbugs</h4>
 								<?php wp_nav_menu(array(
 									'theme_location' => 'about',
@@ -13,7 +13,7 @@
 								)); ?>
 							</div>
 							<!-- footer 2 -->
-							<div class="col-3">
+							<div class="col-md-3">
 								<h4>Drink at Home</h4>
 								<?php wp_nav_menu(array(
 									'theme_location' => 'story',
@@ -22,7 +22,7 @@
 								)); ?>
 							</div>
 							<!-- footer 3 -->
-							<div class="col-3">
+							<div class="col-md-3">
 								<?php wp_nav_menu(array(
 									'theme_location' => 'sitemap',
 									'menu_class' => 'sitemap-link',
@@ -30,7 +30,7 @@
 								)); ?>
 							</div>
 							<!-- footer 4 -->
-							<div class="col-3">
+							<div class="col-md-3">
 								<ul class="footer-social-links">
 									<li>
 										<a href="#">
@@ -57,7 +57,7 @@
 					<div class="container">
 						<div class="row">
 							<!-- copyright 1 -->
-							<div class="col-6">
+							<div class="col-md-6">
 								<?php wp_nav_menu(array(
 									'theme_location' => 'footer',
 									'menu_class' => 'copyright-link',
@@ -65,7 +65,7 @@
 								)); ?>
 							</div>
 							<!-- copyright 2 -->
-							<div class="col-6">
+							<div class="col-md-6">
 								<p class="copyright-text">Starbugs.com | WordPress Theme for Zero to Pro Course.</p>
 							</div>
 						</div>

@@ -1,26 +1,54 @@
 .sitemap {
   background-color: rgba($light-grey, 0.24);
   border-top: 1px solid $light-grey;
-  padding: 50px 0;
+  padding: 25px 0;
+  @media #{$xl} {
+    padding: 50px 0;
+  }
   p {
-    font-size: 16px;
+    font-size: 14px;
     color: $dark-grey;
     font-family: 'Raleway';
     line-height: 1.5;
+    @media #{$md} {
+      font-size: 12px;
+    }
+    @media #{$lg} {
+      font-size: 14px;
+    }
+    @media #{$xl} {
+      font-size: 16px;
+    }
   }
   h4 {
     font-weight: bold;
     font-size: 20px;
-    margin: 0 0 16px;
+    margin: 0 0 8px;
+    @media #{$md} {
+      margin: 0 0 16px;
+      font-size: 16px;
+    }
+    @media #{$lg} {
+      font-size: 20px;
+    }
   }
   .sitemap-link {
     padding: 0;
-    margin: 0;
     list-style: none;
+    margin: 0 0 30px;
+    @media #{$md} {
+      margin: 0;
+    }
     li {
       font-size: 16px;
       color: $dark-grey;
       margin-bottom: 8px;
+      @media #{$md} {
+        font-size: 14px;
+      }
+      @media #{$xl} {
+        font-size: 16px;
+      }
       &:last-child {
         margin-bottom: 0;
       }
@@ -36,18 +64,32 @@
   }
   .footer-social-links {
     padding: 0;
-    margin: 0 0 16px;
     list-style: none;
+    margin: 0 0 8px;
+    @media #{$xl} {
+      margin: 0 0 16px;
+    }
     li {
       display: inline-block;
-      margin-right: 12px;
+      margin: 0 4px 0 0;
+      @media #{$xl} {
+        margin: 0 12px 0 0;
+      }
       &:last-child {
         margin-right: 0;
       }
       img {
-        width: 48px;
-        height: 48px;
+        width: 40px;
+        height: 40px;
         display: block;
+        @media #{$md} {
+          width: 30px;
+          height: 30px;
+        }
+        @media #{$xl} {
+          width: 48px;
+          height: 48px;
+        }
       }
     }
   }
@@ -55,14 +97,25 @@
 
 .copyright {
   background-color: $copyright-bg-color;
-  padding: 30px 0;
+  padding: 15px 0;
+  @media #{$xl} {
+    padding: 30px 0;
+  }
   .copyright-link {
-    margin: 0;
     padding: 0;
     list-style: none;
+    text-align: center;
+    margin: 0 0 8px;
+    @media #{$md} {
+      text-align: left;
+      margin: 0;
+    }
     li {
       display: inline-block;
-      margin-right: 30px;
+      margin: 0 12px 0 0;
+      @media #{$xl} {
+        margin: 0 30px 0 0;
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -70,7 +123,13 @@
         font-family: 'Raleway';
         color: $copyright-font-color;
         text-decoration: none;
-        font-size: 16px;
+        font-size: 14px;
+        @media #{$md} {
+          font-size: 12px;
+        }
+        @media #{$xl} {
+          font-size: 16px;
+        }
         &:hover {
           color: $white;
         }
@@ -78,11 +137,19 @@
     }
   }
   .copyright-text {
-    text-align: right;
+    text-align: center;
     font-family: 'Raleway';
     color: $copyright-font-color;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 12px;
+    line-height: 2;
     margin: 0;
+    @media #{$md} {
+      text-align: right;
+    }
+    @media #{$xl} {
+      font-size: 16px;
+      line-height: 1.5;
+    }
   }
 }
