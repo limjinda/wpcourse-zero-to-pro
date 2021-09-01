@@ -46,7 +46,7 @@
     <section class="main-promotion-related">
       <div class="row">
         <!-- banner1 -->
-        <div class="col-lg-4">
+        <div class="col-md-4">
           <div class="related-item">
             <a href="#">
               <img src="<?php echo get_template_directory_uri()?>/img/promotion-banner1.jpg" alt="" />
@@ -56,7 +56,7 @@
           </div>
         </div>
         <!-- banner2 -->
-        <div class="col-lg-4">
+        <div class="col-md-4">
           <div class="related-item">
             <a href="#">
               <img src="<?php echo get_template_directory_uri()?>/img/promotion-banner2.jpg" alt="" />
@@ -66,7 +66,7 @@
           </div>
         </div>
         <!-- banner 3 -->
-        <div class="col-lg-4">
+        <div class="col-md-4">
           <div class="related-item">
             <a href="#">
               <img src="<?php echo get_template_directory_uri()?>/img/promotion-banner3.jpg" alt="" />

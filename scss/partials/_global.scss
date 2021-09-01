@@ -12,20 +12,34 @@ body {
   max-width: 962px;
   margin: auto;
   h3 {
-    font-size: 24px;
-    margin: 0 0 40px;
+    font-size: 20px;
+    margin: 0 0 20px;
     text-align: center;
     font-weight: bold;
+    @media #{$md} {
+      font-size: 24px;
+    }
+    @media #{$lg} {
+      margin: 0 0 40px;
+    }
   }
   p {
-    font-size: 20px;
+    font-size: 16px;
     margin: 0 0 24px;
-    line-height: 1.5;
+    line-height: 1.7;
+    @media #{$lg} {
+      font-size: 20px;
+      line-height: 1.5;
+    }
   }
   ul {
-    padding-left: 40px;
+    padding-left: 20px;
     margin: 0 0 24px;
-    font-size: 20px;
+    font-size: 16px;
+    @media #{$lg} {
+      padding-left: 40px;
+      font-size: 20px;
+    }
     li {
       margin: 0 0 8px;
       &:last-child {

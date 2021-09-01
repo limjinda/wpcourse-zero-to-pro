@@ -34,7 +34,7 @@
       <form action="" class="form" id="contact_form">
         <div class="row">
           <!-- first name -->
-          <div class="col-lg-4">
+          <div class="col-md-4">
             <div class="form-group">
               <label for="" class="control-label">
                 Your name <span>*</span>
@@ -43,7 +43,7 @@
             </div>
           </div>
           <!-- email -->
-          <div class="col-lg-4">
+          <div class="col-md-4">
             <div class="form-group">
               <label for="" class="control-label">
                 Email <span>*</span>
@@ -52,7 +52,7 @@
             </div>
           </div>
           <!-- phone number -->
-          <div class="col-lg-4">
+          <div class="col-md-4">
             <div class="form-group">
               <label for="" class="control-label">
                 Phone number <span>&nbsp;</span>

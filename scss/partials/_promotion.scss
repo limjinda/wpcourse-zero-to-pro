@@ -1,5 +1,11 @@
 .main-promotion-banner {
-  margin: 64px auto 40px;
+  margin: 20px auto;
+  @media #{$md} {
+    margin: 20px auto 40px;
+  }
+  @media #{$lg} {
+    margin: 64px auto 40px;
+  }
   img {
     max-width: 100%;
     height: auto;
@@ -9,11 +15,17 @@
 }
 
 .main-promotion-sharing-center {
-  margin: 48px auto 64px;
+  margin: 30px auto;
+  @media #{$lg} {
+    margin: 48px auto 64px;
+  }
   p {
-    font-size: 20px;
+    font-size: 16px;
     margin: 0 0 16px;
     text-align: center;
+    @media #{$lg} {
+      font-size: 20px;
+    }
   }
   .sharing-list {
     margin: 0;
@@ -37,11 +49,24 @@
 }
 
 .main-promotion-related {
-  margin: 0 0 80px;
+  margin: 0 0 0px;
+  @media #{$md} {
+    margin: 0 0 40px;
+  }
+  @media #{$lg} {
+    margin: 0 0 80px;
+  }
   .related-item {
+    margin: 0 0 40px;
+    @media #{$md} {
+      margin: 0;
+    }
     a {
       display: block;
-      margin: 0 0 24px;
+      margin: 0 0 15px;
+      @media #{$lg} {
+        margin: 0 0 24px;
+      }
     }
     img {
       max-width: 100%;
@@ -52,6 +77,12 @@
       font-size: 20px;
       margin: 0 0 8px;
       text-align: center;
+      @media #{$md} {
+        font-size: 16px;
+      }
+      @media #{$lg} {
+        font-size: 20px;
+      }
       a {
         margin: 0;
         color: $black;
@@ -62,6 +93,12 @@
       text-align: center;
       font-size: 16px;
       margin: 0;
+      @media #{$md} {
+        font-size: 14px;
+      }
+      @media #{$lg} {
+        font-size: 16px;
+      }
     }
   }
 }
