@@ -68,4 +68,6 @@ function wp_theme_register_script() {
 }
 add_action('wp_enqueue_scripts', 'wp_theme_register_script');
 
+add_filter( 'wpcf7_autop_or_not', '__return_false' );
+
 ?>

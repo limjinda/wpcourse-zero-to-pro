@@ -29,3 +29,24 @@
     }
   }
 }
+
+.wpcf7-not-valid-tip {
+  display: block;
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  border: 0;
+  padding: 12px 20px;
+  margin: 0;
+  border-radius: 4px;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
+  background-color: rgba($yellow, 0.3);
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  background-color: rgba($green, 0.3);
+}
