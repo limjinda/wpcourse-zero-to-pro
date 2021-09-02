@@ -61,7 +61,7 @@ body {
 
 .slider-block {
   display: none;
-  @media #{$md} {
+  @media #{$sm} {
     display: block;
   }
 }
@@ -71,7 +71,7 @@ body {
   &.slick-dotted.slick-slider {
     margin: 0;
   }
-  @media #{$md} {
+  @media #{$sm} {
     display: none;
   }
 }

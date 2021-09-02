@@ -23,7 +23,21 @@ jQuery('.menu-slider').slick({
   arrows: true,
   slidesToShow: 3,
   prevArrow: '<a href="javascript:void(0)" class="menu-prev"></a>',
-  nextArrow: '<a href="javascript:void(0)" class="menu-next"></a>'
+  nextArrow: '<a href="javascript:void(0)" class="menu-next"></a>',
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
 });
 
 jQuery('.mobile-show-menu').on('click', function(){

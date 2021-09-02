@@ -1,5 +1,14 @@
+.menu-content {
+  @media #{$xl} {
+    margin: 0 0 30px;
+  }
+}
+
 .menu-searchbox {
-  padding: 60px 0;
+  padding: 30px 0;
+  @media #{$xl} {
+    padding: 60px 0;
+  }
   .form-group {
     max-width: 600px;
     margin: 0 auto;
@@ -67,6 +76,7 @@
 }
 
 .sidebar-wrapper {
+  margin: 0 0 40px;
   p {
     color: $dark-grey;
     font-size: 16px;
@@ -93,19 +103,39 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     .menu-item {
-      flex: 0 0 calc( (100% - 45px) / 4 );
-      margin: 0 15px 30px 0;
-      &:nth-child(4n) {
-        margin-right: 0;
-      }  
+      flex: 0 0 100%;
+      margin: 0 0 30px;
+      @media #{$md} {
+        flex: 0 0 calc( (100% - 15px) /2 );
+        margin: 0 15px 30px 0;
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+      @media #{$lg} {
+        flex: 0 0 calc( (100% - 30px) / 3 );
+        margin: 0 15px 30px 0;
+        &:nth-child(2n) {
+          margin-right: 15px;
+        }
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+      @media #{$xl} {
+        flex: 0 0 calc( (100% - 45px) / 4 );
+        margin: 0 15px 30px 0;
+        &:nth-child(3n) {
+          margin-right: 15px;
+        }
+        &:nth-child(4n) {
+          margin-right: 0;
+        }  
+      }
     }
   }
   .menu-slider {
     margin: 24px auto;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
     .slick-list {
       margin: 0 -15px 0 0;
     }
@@ -136,8 +166,8 @@
     }
   }
   .menu-item {
-      flex: 0 0 calc( (100% - 30px) / 3 );
-      margin: 0 15px 0 0;
+    flex: 0 0 calc( (100% - 30px) / 3 );
+    margin: 0 15px 0 0;
     &:last-child {
       margin-right: 0;
     }
@@ -157,6 +187,12 @@
       font-size: 14px;
       line-height: 1.5;
       margin: 0 0 12px;
+      @media #{$lg} {
+        font-size: 12px;
+      }
+      @media #{$xl} {
+        font-size: 14px;
+      }
     }
     .menu-action {
       .menu-stock {

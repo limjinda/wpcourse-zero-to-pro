@@ -5,9 +5,7 @@
 <div class="menu-wrapper">
   
   <!-- slider -->
-  <section class="slider-block">
-    <img src="<?php echo get_template_directory_uri() ?>/img/header-menu-1.jpg" alt="Slider - image 1" />
-  </section>
+  <?php get_template_part('views/slider') ?>
   
   <!-- search -->
   <section class="menu-searchbox">
@@ -22,7 +20,7 @@
       <div class="row">
         <!-- sidebar -->
         
-        <div class="col-lg-3">
+        <div class="col-lg-4 col-xl-3">
           <div class="sidebar-wrapper">
             <div class="sidebar-item">
               <ul>
@@ -36,7 +34,7 @@
         </div>
 
         <!-- menu items -->
-        <div class="col-lg-9">
+        <div class="col-lg-8 col-xl-9">
           <div class="menu-content-wrapper">
 
             <!-- drink -->
