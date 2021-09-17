@@ -14,8 +14,7 @@ function wp_theme_setup() {
 	 * un comment these lines if you want to register your own image size
 	 * it's effect when uploading new image.
 	 */
-	// add_image_size( 'cover-image', 400, 300, true );
-	// add_image_size( 'wp-theme-prototype-600', 600, 300, true );
+	add_image_size( 'product', 400, 400, array('center', 'center') );
 
 	/**
 	 * Register menu 
