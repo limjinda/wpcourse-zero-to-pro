@@ -12,7 +12,7 @@
   <div class="container">
     <!-- breadcrumb -->
     <ul class="single-breadcrumb-list">
-      <li><a href="#">Home</a></li>
+      <li><a href="<?php echo home_url(); ?>" title="Home">Home</a></li>
       <li>Article</li>
     </ul>
 

@@ -2,7 +2,7 @@
   get_header(); 
   $related = new WP_Query( array(
     'category_name' => 'promotion',
-    'posts_per_page' => 4,
+    'posts_per_page' => 3,
     'orderby' => 'rand',
     'post__not_in' => array(get_the_ID())
   ));
@@ -12,7 +12,7 @@
   <div class="container">
     <!-- breadcrumb -->
     <ul class="single-breadcrumb-list">
-      <li><a href="#">Home</a></li>
+      <li><a href="<?php echo home_url(); ?>" title="Home">Home</a></li>
       <li>Promotion</li>
     </ul>
 

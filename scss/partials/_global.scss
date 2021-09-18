@@ -26,6 +26,9 @@ body {
       margin: 100px 0 32px;
     }
   }
+  h2 {
+    margin: 40px 0 24px;
+  }
   h3 {
     font-size: 20px;
     margin: 0 0 20px;
@@ -38,6 +41,24 @@ body {
       margin: 0 0 40px;
     }
   }
+  h4 {
+    line-height: 1.4;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 24px 0 16px;
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 24px 0 16px;
+  }
+  h6 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 24px 0 16px;
+  }
   p {
     font-size: 16px;
     margin: 0 0 24px;
@@ -47,7 +68,18 @@ body {
       line-height: 1.5;
     }
   }
-  ul {
+  a {
+    color: $green;
+    text-decoration: underline;
+    &:hover {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+  hr {
+    margin: 40px 0;
+  }
+  ul, ol {
     padding-left: 20px;
     margin: 0 0 24px;
     font-size: 16px;

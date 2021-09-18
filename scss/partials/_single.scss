@@ -120,4 +120,15 @@ h1.single-promotion-title {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
+  ul, ol {
+    margin: 0 0 40px;
+    li {
+      display: inline-block;
+      margin: 0 20px 8px 0; 
+    }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
