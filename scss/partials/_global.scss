@@ -11,6 +11,21 @@ body {
 .page-content {
   max-width: 962px;
   margin: auto;
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 32px 0 20px;
+    @media #{$md} {
+      margin: 24px 0 20px;
+    }
+    @media #{$lg} {
+      font-size: 32px;
+      margin: 60px 0 32px;
+    }
+    @media #{$xl} {
+      margin: 100px 0 32px;
+    }
+  }
   h3 {
     font-size: 20px;
     margin: 0 0 20px;

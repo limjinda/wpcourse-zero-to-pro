@@ -1,3 +1,9 @@
+.container {
+  @media #{$xxl} {
+    max-width: 1110px;
+  }
+}
+
 .btn-primary {
   padding: 10px 48px;
   background-color: $green;
