@@ -31,17 +31,17 @@
       <p>Share to your friends</p>
       <ul class="sharing-list">
         <li>
-          <a href="#">
+          <a href="javascript:void(0)" class="social-facebook" title="Share on Facebook">
             <img src="<?php echo get_template_directory_uri() ?>/img/icon-facebook.png" alt="" />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="javascript:void(0)" class="social-twitter" title="Share on Twitter">
             <img src="<?php echo get_template_directory_uri() ?>/img/icon-twitter.png" alt="" />
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="javascript:void(0)" class="social-line" title="Share on Line">
             <img src="<?php echo get_template_directory_uri() ?>/img/icon-line.png" alt="" />
           </a>
         </li>
