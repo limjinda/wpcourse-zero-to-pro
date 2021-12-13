@@ -69,4 +69,49 @@ add_action('wp_enqueue_scripts', 'wp_theme_register_script');
 
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
+function add_product_post_type () {
+	$labels = array(
+		'name'                 => 'Products',
+		'singular_name'        => 'Product',
+		'menu_name'            => 'Products',
+		'name_admin_bar'       => 'Products',
+		'add_new'              => 'Add new',
+		'add_new_item'         => 'Add new Product',
+		'new_item'             => 'New Product',
+		'edit_item'            => 'Edit Product',
+		'view_item'            => 'View Product',
+		'all_items'            => 'All Products'
+	);
+	$args = array(
+		'labels'              => $labels,
+		'public'              => true,
+		'publicly_queryable'  => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'query_var'           => true,
+		'rewrite'             => array( 'slug' => 'products' ),
+		'capability_type'     => 'post',
+		'has_archive'         => true,
+		'hierarchical'        => false,
+		'menu_position'       => 100,
+		'supports'            => array( 'title', 'editor', 'thumbnail' ),
+		'menu_icon'						=> 'dashicons-carrot'
+	);
+	register_post_type('product', $args);
+}
+add_action('init', 'add_product_post_type');
+
+function add_product_taxonomy () {
+	$args = array(
+		'label'                 => 'Categories',
+		'public'                => true,
+		'hierarchical'          => true,
+		'show_ui'               => true,
+		'show_admin_column'     => true,
+		'rewrite'               => array('slug' => 'category'),
+	);
+	register_taxonomy( 'product_category', array('product'), $args );
+}
+add_action('init', 'add_product_taxonomy', 0);
+
 ?>
