@@ -1,4 +1,39 @@
-<?php /* Template Name: Menus */ ?>
+<?php 
+  /* Template Name: Menus */ 
+  $beverages = new WP_Query( array(
+    'post_type' => 'product',
+    'orderby'   => 'date',
+    'tax_query' => array( 
+      array( 
+        'taxonomy' => 'product_category',
+        'field'    => 'slug',
+        'terms'    => 'beverages'
+      )
+    )
+  ));
+  $breakfast = new WP_Query( array(
+    'post_type' => 'product',
+    'orderby'   => 'date',
+    'tax_query' => array( 
+      array( 
+        'taxonomy' => 'product_category',
+        'field'    => 'slug',
+        'terms'    => 'breakfast'
+      )
+    )
+  ));
+  $kids = new WP_Query( array(
+    'post_type' => 'product',
+    'orderby'   => 'date',
+    'tax_query' => array( 
+      array( 
+        'taxonomy' => 'product_category',
+        'field'    => 'slug',
+        'terms'    => 'kids-menu'
+      )
+    )
+  ));
+?>
 
 <?php get_header(); ?>
 
@@ -42,86 +77,27 @@
               <h3>เมนูเครื่องดื่ม</h3>
               <p>* เครื่องดื่มร้อนและเครื่องดื่ม Nitro มีจำหน่ายในขนาด Short (8 oz.) ในราคาที่ถูกกว่าขนาด Tall (12 oz.) 15 บาท</p>
               <div class="menu-slider">
-                <!-- item 1 -->
-                <div class="menu-item">
-                  <img src="<?php echo get_template_directory_uri() ?>/img/drink-1.jpg" alt="Drink 1" class="menu-image" />
-                  <p class="menu-name">ลาเต้ วิปปิ้งพอร์ตโต้</p>
-                  <p class="menu-description">
-                    วิปครีมสูตรพิเศษผสมกลิ่นมาร์ชแมลโลว์ด้านล่าง ราดด้วยซอสมอคค่า สลับชั้นด้วยกาแฟปั่น ท็อปด้วยวิปครีมมาร์ชแมลโลว์และมาร์ชแมลโลว์เต็มคำ
-                  </p>
-                  <div class="menu-action">
-                    <div class="row">
-                      <!-- stock -->
-                      <div class="col-6">
-                        <p class="menu-stock">In Stock</p>
-                      </div>
-                      <!-- price -->
-                      <div class="col-6">
-                        <p class="menu-price">80 บาท</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- item 2 -->
-                <div class="menu-item">
-                  <img src="<?php echo get_template_directory_uri() ?>/img/drink-2.jpg" alt="Drink 1" class="menu-image" />
-                  <p class="menu-name">ลาเต้ วิปปิ้งพอร์ตโต้</p>
-                  <p class="menu-description">
-                    วิปครีมสูตรพิเศษผสมกลิ่นมาร์ชแมลโลว์ด้านล่าง ราดด้วยซอสมอคค่า สลับชั้นด้วยกาแฟปั่น ท็อปด้วยวิปครีมมาร์ชแมลโลว์และมาร์ชแมลโลว์เต็มคำ
-                  </p>
-                  <div class="menu-action">
-                    <div class="row">
-                      <!-- stock -->
-                      <div class="col-6">
-                        <p class="menu-stock">In Stock</p>
-                      </div>
-                      <!-- price -->
-                      <div class="col-6">
-                        <p class="menu-price">80 บาท</p>
+                <?php if ($beverages->have_posts()) : ?>
+                  <?php while($beverages->have_posts()) : $beverages->the_post(); ?>
+                    <div class="menu-item">
+                      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="menu-image" />
+                      <p class="menu-name"><?php the_title(); ?></p>
+                      <p class="menu-description"><?php the_content(); ?></p>
+                      <div class="menu-action">
+                        <div class="row">
+                          <!-- stock -->
+                          <div class="col-6">
+                            <p class="menu-stock"><?php the_field('stock_status'); ?></p>
+                          </div>
+                          <!-- price -->
+                          <div class="col-6">
+                            <p class="menu-price"><?php the_field('price'); ?> บาท</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <!-- item 3 -->
-                <div class="menu-item">
-                  <img src="<?php echo get_template_directory_uri() ?>/img/drink-3.jpg" alt="Drink 1" class="menu-image" />
-                  <p class="menu-name">ลาเต้ วิปปิ้งพอร์ตโต้</p>
-                  <p class="menu-description">
-                    วิปครีมสูตรพิเศษผสมกลิ่นมาร์ชแมลโลว์ด้านล่าง ราดด้วยซอสมอคค่า สลับชั้นด้วยกาแฟปั่น ท็อปด้วยวิปครีมมาร์ชแมลโลว์และมาร์ชแมลโลว์เต็มคำ
-                  </p>
-                  <div class="menu-action">
-                    <div class="row">
-                      <!-- stock -->
-                      <div class="col-6">
-                        <p class="menu-stock">In Stock</p>
-                      </div>
-                      <!-- price -->
-                      <div class="col-6">
-                        <p class="menu-price">80 บาท</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- item 4 -->
-                <div class="menu-item">
-                  <img src="<?php echo get_template_directory_uri() ?>/img/drink-3.jpg" alt="Drink 1" class="menu-image" />
-                  <p class="menu-name">ลาเต้ วิปปิ้งพอร์ตโต้</p>
-                  <p class="menu-description">
-                    วิปครีมสูตรพิเศษผสมกลิ่นมาร์ชแมลโลว์ด้านล่าง ราดด้วยซอสมอคค่า สลับชั้นด้วยกาแฟปั่น ท็อปด้วยวิปครีมมาร์ชแมลโลว์และมาร์ชแมลโลว์เต็มคำ
-                  </p>
-                  <div class="menu-action">
-                    <div class="row">
-                      <!-- stock -->
-                      <div class="col-6">
-                        <p class="menu-stock">In Stock</p>
-                      </div>
-                      <!-- price -->
-                      <div class="col-6">
-                        <p class="menu-price">80 บาท</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  <?php endwhile; ?>
+                <?php endif; ?>
               </div>
             </div>
 
@@ -129,66 +105,27 @@
             <div class="menu-type">
               <h3>อาหารเช้า</h3>
               <div class="menu-slider">
-                <!-- item 1 -->
-                <div class="menu-item">
-                  <img src="<?php echo get_template_directory_uri() ?>/img/breakfast-1.jpg" alt="Drink 1" class="menu-image" />
-                  <p class="menu-name">ลาเต้ วิปปิ้งพอร์ตโต้</p>
-                  <p class="menu-description">
-                    วิปครีมสูตรพิเศษผสมกลิ่นมาร์ชแมลโลว์ด้านล่าง ราดด้วยซอสมอคค่า สลับชั้นด้วยกาแฟปั่น ท็อปด้วยวิปครีมมาร์ชแมลโลว์และมาร์ชแมลโลว์เต็มคำ
-                  </p>
-                  <div class="menu-action">
-                    <div class="row">
-                      <!-- stock -->
-                      <div class="col-6">
-                        <p class="menu-stock">In Stock</p>
-                      </div>
-                      <!-- price -->
-                      <div class="col-6">
-                        <p class="menu-price">80 บาท</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- item 2 -->
-                <div class="menu-item">
-                  <img src="<?php echo get_template_directory_uri() ?>/img/breakfast-2.jpg" alt="Drink 1" class="menu-image" />
-                  <p class="menu-name">ลาเต้ วิปปิ้งพอร์ตโต้</p>
-                  <p class="menu-description">
-                    วิปครีมสูตรพิเศษผสมกลิ่นมาร์ชแมลโลว์ด้านล่าง ราดด้วยซอสมอคค่า สลับชั้นด้วยกาแฟปั่น ท็อปด้วยวิปครีมมาร์ชแมลโลว์และมาร์ชแมลโลว์เต็มคำ
-                  </p>
-                  <div class="menu-action">
-                    <div class="row">
-                      <!-- stock -->
-                      <div class="col-6">
-                        <p class="menu-stock">In Stock</p>
-                      </div>
-                      <!-- price -->
-                      <div class="col-6">
-                        <p class="menu-price">80 บาท</p>
+                <?php if ($breakfast->have_posts()) : ?>
+                  <?php while($breakfast->have_posts()) : $breakfast->the_post(); ?>
+                    <div class="menu-item">
+                      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="menu-image" />
+                      <p class="menu-name"><?php the_title(); ?></p>
+                      <p class="menu-description"><?php the_content(); ?></p>
+                      <div class="menu-action">
+                        <div class="row">
+                          <!-- stock -->
+                          <div class="col-6">
+                            <p class="menu-stock"><?php the_field('stock_status'); ?></p>
+                          </div>
+                          <!-- price -->
+                          <div class="col-6">
+                            <p class="menu-price"><?php the_field('price'); ?> บาท</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <!-- item 3 -->
-                <div class="menu-item">
-                  <img src="<?php echo get_template_directory_uri() ?>/img/breakfast-3.jpg" alt="Drink 1" class="menu-image" />
-                  <p class="menu-name">ลาเต้ วิปปิ้งพอร์ตโต้</p>
-                  <p class="menu-description">
-                    วิปครีมสูตรพิเศษผสมกลิ่นมาร์ชแมลโลว์ด้านล่าง ราดด้วยซอสมอคค่า สลับชั้นด้วยกาแฟปั่น ท็อปด้วยวิปครีมมาร์ชแมลโลว์และมาร์ชแมลโลว์เต็มคำ
-                  </p>
-                  <div class="menu-action">
-                    <div class="row">
-                      <!-- stock -->
-                      <div class="col-6">
-                        <p class="menu-stock">In Stock</p>
-                      </div>
-                      <!-- price -->
-                      <div class="col-6">
-                        <p class="menu-price">80 บาท</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  <?php endwhile; ?>
+                <?php endif; ?>
               </div>
             </div>
 
@@ -196,66 +133,27 @@
             <div class="menu-type">
               <h3>เมนูคุณหนู</h3>
               <div class="menu-slider">
-                <!-- item 1 -->
-                <div class="menu-item">
-                  <img src="<?php echo get_template_directory_uri() ?>/img/kido-1.jpg" alt="Drink 1" class="menu-image" />
-                  <p class="menu-name">ลาเต้ วิปปิ้งพอร์ตโต้</p>
-                  <p class="menu-description">
-                    วิปครีมสูตรพิเศษผสมกลิ่นมาร์ชแมลโลว์ด้านล่าง ราดด้วยซอสมอคค่า สลับชั้นด้วยกาแฟปั่น ท็อปด้วยวิปครีมมาร์ชแมลโลว์และมาร์ชแมลโลว์เต็มคำ
-                  </p>
-                  <div class="menu-action">
-                    <div class="row">
-                      <!-- stock -->
-                      <div class="col-6">
-                        <p class="menu-stock">In Stock</p>
-                      </div>
-                      <!-- price -->
-                      <div class="col-6">
-                        <p class="menu-price">80 บาท</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- item 2 -->
-                <div class="menu-item">
-                  <img src="<?php echo get_template_directory_uri() ?>/img/kido-2.jpg" alt="Drink 1" class="menu-image" />
-                  <p class="menu-name">ลาเต้ วิปปิ้งพอร์ตโต้</p>
-                  <p class="menu-description">
-                    วิปครีมสูตรพิเศษผสมกลิ่นมาร์ชแมลโลว์ด้านล่าง ราดด้วยซอสมอคค่า สลับชั้นด้วยกาแฟปั่น ท็อปด้วยวิปครีมมาร์ชแมลโลว์และมาร์ชแมลโลว์เต็มคำ
-                  </p>
-                  <div class="menu-action">
-                    <div class="row">
-                      <!-- stock -->
-                      <div class="col-6">
-                        <p class="menu-stock">In Stock</p>
-                      </div>
-                      <!-- price -->
-                      <div class="col-6">
-                        <p class="menu-price">80 บาท</p>
+                <?php if ($kids->have_posts()) : ?>
+                  <?php while($kids->have_posts()) : $kids->the_post(); ?>
+                    <div class="menu-item">
+                      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="menu-image" />
+                      <p class="menu-name"><?php the_title(); ?></p>
+                      <p class="menu-description"><?php the_content(); ?></p>
+                      <div class="menu-action">
+                        <div class="row">
+                          <!-- stock -->
+                          <div class="col-6">
+                            <p class="menu-stock"><?php the_field('stock_status'); ?></p>
+                          </div>
+                          <!-- price -->
+                          <div class="col-6">
+                            <p class="menu-price"><?php the_field('price'); ?> บาท</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <!-- item 3 -->
-                <div class="menu-item">
-                  <img src="<?php echo get_template_directory_uri() ?>/img/kido-3.jpg" alt="Drink 1" class="menu-image" />
-                  <p class="menu-name">ลาเต้ วิปปิ้งพอร์ตโต้</p>
-                  <p class="menu-description">
-                    วิปครีมสูตรพิเศษผสมกลิ่นมาร์ชแมลโลว์ด้านล่าง ราดด้วยซอสมอคค่า สลับชั้นด้วยกาแฟปั่น ท็อปด้วยวิปครีมมาร์ชแมลโลว์และมาร์ชแมลโลว์เต็มคำ
-                  </p>
-                  <div class="menu-action">
-                    <div class="row">
-                      <!-- stock -->
-                      <div class="col-6">
-                        <p class="menu-stock">In Stock</p>
-                      </div>
-                      <!-- price -->
-                      <div class="col-6">
-                        <p class="menu-price">80 บาท</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  <?php endwhile; ?>
+                <?php endif; ?>
               </div>
             </div>
 
