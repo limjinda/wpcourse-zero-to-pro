@@ -33,17 +33,17 @@
 							<div class="col-md-3">
 								<ul class="footer-social-links">
 									<li>
-										<a href="#">
+										<a href="<?php echo ot_get_option('facebook_url') ?>" target="_blank">
 											<img src="<?php echo get_template_directory_uri() ?>/img/icon-facebook.png" alt="facebook" />
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="<?php echo ot_get_option('twitter_url') ?>" target="_blank">
 											<img src="<?php echo get_template_directory_uri() ?>/img/icon-twitter.png" alt="twitter" />
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="<?php echo ot_get_option('line_url') ?>" target="_blank">
 											<img src="<?php echo get_template_directory_uri() ?>/img/icon-line.png" alt="line" />
 										</a>
 									</li>

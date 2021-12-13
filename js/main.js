@@ -71,3 +71,9 @@ jQuery(document).on('click', '.social-line', function(){
   let url = `https://lineit.line.me/share/ui?url=${window.location.href}`
   popupWindow(url, 'Share on Line', window, 600, 300);
 })
+
+jQuery('.sidebar-wrapper').stickySidebar({
+  topSpacing: 48,
+  bottomSpacing: 48,
+  minWidth: 1000,
+});

@@ -94,7 +94,8 @@ const scripts = () => gulp
  const vendorScripts = () => gulp
  .src([
 		'./js/vendor/modernizr-3.6.0.min.js', 
-		'./node_modules/slick-carousel/slick/slick.js'
+		'./node_modules/slick-carousel/slick/slick.js',
+		'./node_modules/sticky-sidebar/dist/jquery.sticky-sidebar.js'
 	], {allowEmpty: true})
  .pipe(
 		concat('vendor.js', {

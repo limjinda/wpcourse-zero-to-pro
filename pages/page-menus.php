@@ -59,9 +59,9 @@
           <div class="sidebar-wrapper">
             <div class="sidebar-item">
               <ul>
-                <li><a href="#">เมนูเครื่องดื่ม</a></li>
-                <li><a href="#">อาหารเช้า</a></li>
-                <li><a href="#">เมนูคุณหนู</a></li>
+                <li><a href="#beverages">เมนูเครื่องดื่ม</a></li>
+                <li><a href="#breakfast">อาหารเช้า</a></li>
+                <li><a href="#kids">เมนูคุณหนู</a></li>
               </ul>
             </div>
             <p>บอกให้รู้เอาไว้ว่า ราคาและสินค้าอาจ แตกต่างกันในบางสาขา</p>
@@ -73,7 +73,7 @@
           <div class="menu-content-wrapper">
 
             <!-- drink -->
-            <div class="menu-type">
+            <div class="menu-type" id="beverages">
               <h3>เมนูเครื่องดื่ม</h3>
               <p>* เครื่องดื่มร้อนและเครื่องดื่ม Nitro มีจำหน่ายในขนาด Short (8 oz.) ในราคาที่ถูกกว่าขนาด Tall (12 oz.) 15 บาท</p>
               <div class="menu-slider">
@@ -102,7 +102,7 @@
             </div>
 
             <!-- breakfast -->
-            <div class="menu-type">
+            <div class="menu-type" id="breakfast">
               <h3>อาหารเช้า</h3>
               <div class="menu-slider">
                 <?php if ($breakfast->have_posts()) : ?>
@@ -130,7 +130,7 @@
             </div>
 
             <!-- kido -->
-            <div class="menu-type">
+            <div class="menu-type" id="kids">
               <h3>เมนูคุณหนู</h3>
               <div class="menu-slider">
                 <?php if ($kids->have_posts()) : ?>
